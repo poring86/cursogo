@@ -1,9 +1,9 @@
 package main
 
 var b bool = true
-var c int
-var d string
-var e float64
+var c int = 10
+var d string = "Matheus"
+var e float64 = 3.4
 
 func main() {
 	a := "teste"
