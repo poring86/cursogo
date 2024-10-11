@@ -21,6 +21,10 @@ func (c Client) Desativar() {
 	fmt.Printf("O cliente %s foi desativado \n", c.Nome)
 }
 
+type Pessoa interface {
+	Desativar()
+}
+
 func main() {
 	matheus := Client{
 		Nome:  "Matheus",
