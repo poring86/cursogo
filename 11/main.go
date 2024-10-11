@@ -16,6 +16,11 @@ type Client struct {
 	Endereco
 }
 
+func (c Client) Desativar() {
+	c.Ativo = false
+	fmt.Printf("O cliente %s foi desativado \n", c.Nome)
+}
+
 func main() {
 	matheus := Client{
 		Nome:  "Matheus",
@@ -26,6 +31,8 @@ func main() {
 
 	matheus.Estado = "MS"
 	matheus.Endereco.Numero = 20
+
+	matheus.Desativar()
 
 	fmt.Println(matheus.Ativo)
 
