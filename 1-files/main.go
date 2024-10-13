@@ -39,6 +39,7 @@ func main() {
 
 	for {
 		n, err := reader.Read(buffer)
+
 		if err != nil {
 			break
 		}
