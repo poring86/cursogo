@@ -39,12 +39,16 @@ func main() {
 
 	for {
 		n, err := reader.Read(buffer)
-
-		println(n)
 		if err != nil {
 			break
 		}
 		fmt.Println(string(buffer[:n]))
+	}
+
+	err = os.Remove("arquivo.txt")
+
+	if err != nil {
+		panic(err)
 	}
 
 }
